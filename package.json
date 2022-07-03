@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@suid/material": "^0.4.2",
+    "@zag-js/solid": "^0.1.9",
+    "@zag-js/tabs": "^0.1.8",
     "solid-js": "^1.4.2"
   }
 }

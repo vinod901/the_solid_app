@@ -1,37 +1,26 @@
 import type { Component } from "solid-js";
 import AppBar from "@suid/material/AppBar";
-import Alert from "@suid/material/Alert";
+import Avatar from "@suid/material/Avatar";
 import Body from "./Body";
 import vinod from "../assets/vinod.jpg";
-import { createSignal, Show } from "solid-js";
 
 let Home: Component = () => {
-  let [show, setShow] = createSignal(false);
-  const toggle = () => {
-    return setShow(!show());
-  };
   return (
     <div>
       <AppBar position="static">
         <div style="display:flex;">
           <h1 style="padding-left:20px;">Vinod Reddy YerrapuReddy</h1>
-          <img
-            onClick={toggle}
-            style="height:50px;width:50px;position:absolute;right:20px;top:20px;border-radius:50%;"
-            src={vinod}
-            alt=""
-          />
+          <div style="right:20px;top:20px;position:absolute;">
+            <Avatar
+              alt="vinod reddy"
+              src={vinod}
+              sx={{
+                width: 50,
+                height: 50,
+              }}
+            />
+          </div>
         </div>
-        <Show
-          when={show()}
-          fallback={
-            <Alert severity="warning">Waiting to click the button!</Alert>
-          }
-        >
-          <Alert severity="success" onClick={toggle}>
-            Success!
-          </Alert>
-        </Show>
       </AppBar>
       <Body />
     </div>
