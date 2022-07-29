@@ -7,8 +7,8 @@ let Bio: Component = () => {
     <div style={{ width: "100%" }}>
       <div style={{ display: "flex" }}>
         <div>
-          <h1>Yarrapureddy Vinod Kumar Reddy</h1>
-          <h3>s/o Yarrapureddy Jaya Chandra Reddy</h3>
+          <h1>Yerrapureddy Vinod Kumar Reddy</h1>
+          <h3>s/o Yerrapureddy Jaya Chandra Reddy</h3>
           <h5>Born on 29th April 1999</h5>
           <h2>Address</h2>
           <p>

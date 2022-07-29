@@ -2,6 +2,7 @@ import * as tabs from "@zag-js/tabs";
 import { normalizeProps, useMachine, useSetup } from "@zag-js/solid";
 import { createMemo, createUniqueId, For } from "solid-js";
 import type { Component } from "solid-js";
+import Button from "@suid/material/Button";
 
 let Tabs: Component = (data: any) => {
   const [state, send] = useMachine(tabs.machine({ value: "item-1" }));
@@ -10,22 +11,17 @@ let Tabs: Component = (data: any) => {
 
   return (
     <div ref={ref} {...api().rootProps}>
-      <div {...api().triggerGroupProps}>
+      <div {...api().triggerGroupProps} style="display:flex;">
         <For each={data}>
           {(item) => (
-            <button
-              {...api().getTriggerProps({ value: item.value })}
-              style={{
-                height: "50px",
-                width: "auto",
-                "min-width": "100px",
-                "background-color": "white",
-                "border-color": "none",
-                "border-bottom-color": "#000",
-              }}
-            >
-              {item.label}
-            </button>
+            <div style="margin:5px;">
+              <Button
+                variant="contained"
+                {...api().getTriggerProps({ value: item.value })}
+              >
+                {item.label}
+              </Button>
+            </div>
           )}
         </For>
       </div>
