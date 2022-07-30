@@ -15,25 +15,25 @@ body {
   border-radius: 20px;
   display: flex;
 }
-.space {
-  width: 20%;
+.profession {
+  font-size: larger;
+  font-weight: bold;
+  margin-top: 18px;
+  margin-left: 10px;
+  flex-grow: 7;
 }
 .tabs {
   margin-top: 15px;
   display: flex;
-  right: 20%;
-  position: absolute;
+  flex-grow: 1;
 }
 .tab {
   width: 100px;
   border-radius: 10px;
-  display: flex;
 }
-.profession {
-  font-size: larger;
-  font-weight: bold;
-  margin-top: 15px;
-  margin-left: 30px;
+.card {
+  display: flex;
+  margin: 50px;
 }
 .intro {
   font-size: 48px;
@@ -41,26 +41,14 @@ body {
   margin-top: 15px;
   margin: 100px;
   margin-top: 200px;
+  flex-grow: 3;
 }
 .job {
   color: #7c55ef;
-}
-.card {
-  display: flex;
 }
 .profile {
   width: 400px;
   height: 400px;
   border-radius: 30px;
-  overflow: hidden;
-  margin-left: 500px;
-  margin: 100px;
-}
-.logo {
-  display: flex;
-  font-weight: 1000;
-  font-size: larger;
-  margin-right: 10px;
-  position: absolute;
-  top: 20px;
+  flex-grow: 2;
 }
