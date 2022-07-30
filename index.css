@@ -33,6 +33,8 @@ body {
   height: 30px;
   border: none;
   background-color: rgb(172, 131, 242);
+  font-size: medium;
+  font-weight: bold;
 }
 .card {
   display: flex;

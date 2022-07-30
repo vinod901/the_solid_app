@@ -27,25 +27,19 @@ const currentTime = () => {
 
 currentTime();
 
-const home = () => {
-  alert("Sorry, Home page is not yet available.");
-};
-
-const portfolio = () => {
-  alert("Sorry, Portfolio page is not yet available.");
-};
-
-let modal = document.getElementById("myModal");
-let btn = document.getElementById("about");
-let span = document.getElementsByClassName("close")[0];
-btn.onclick = function () {
-  modal.style.display = "block";
-};
-span.onclick = function () {
-  modal.style.display = "none";
-};
-window.onclick = function (event) {
-  if (event.target == modal) {
+const openModal = (btn, modal, i) => {
+  let span = document.getElementsByClassName("close")[i];
+  btn.onclick = () => {
+    modal.style.display = "block";
+  };
+  span.onclick = () => {
     modal.style.display = "none";
-  }
+  };
 };
+
+const ids = ["home", "about", "portfolio"];
+for (let i = 0; i < ids.length; i++) {
+  const btn = document.getElementById(ids[i]);
+  const modal = document.getElementById(ids[i] + "Modal");
+  openModal(btn, modal, i);
+}
