@@ -31,10 +31,6 @@ const home = () => {
   alert("Sorry, Home page is not yet available.");
 };
 
-const about = () => {
-  alert("Sorry, About page is not yet available.");
-};
-
 const portfolio = () => {
   alert("Sorry, Portfolio page is not yet available.");
 };
