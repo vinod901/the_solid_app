@@ -24,4 +24,32 @@ const currentTime = () => {
     currentTime();
   }, 1000);
 };
+
 currentTime();
+
+const home = () => {
+  alert("Sorry, Home page is not yet available.");
+};
+
+const about = () => {
+  alert("Sorry, About page is not yet available.");
+};
+
+const portfolio = () => {
+  alert("Sorry, Portfolio page is not yet available.");
+};
+
+let modal = document.getElementById("myModal");
+let btn = document.getElementById("about");
+let span = document.getElementsByClassName("close")[0];
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+span.onclick = function () {
+  modal.style.display = "none";
+};
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
