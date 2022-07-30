@@ -1,32 +1,3 @@
-const currentTime = () => {
-  let date = new Date();
-  let hh = date.getHours();
-  let mm = date.getMinutes();
-  let ss = date.getSeconds();
-  let session = "AM";
-
-  if (hh == 0) {
-    hh = 12;
-  }
-  if (hh > 12) {
-    hh = hh - 12;
-    session = "PM";
-  }
-
-  hh = hh < 10 ? "0" + hh : hh;
-  mm = mm < 10 ? "0" + mm : mm;
-  ss = ss < 10 ? "0" + ss : ss;
-
-  let time = hh + ":" + mm + ":" + ss + " " + session;
-
-  document.getElementById("clock").innerText = time;
-  let t = setTimeout(function () {
-    currentTime();
-  }, 1000);
-};
-
-currentTime();
-
 const openModal = (btn, modal, i) => {
   let span = document.getElementsByClassName("close")[i];
   btn.onclick = () => {
@@ -43,3 +14,20 @@ for (let i = 0; i < ids.length; i++) {
   const modal = document.getElementById(ids[i] + "Modal");
   openModal(btn, modal, i);
 }
+
+const age = (birthDate) => {
+  const senddate = new Date();
+  const diffDate = new Date(senddate - birthDate);
+  const agestring =
+    "I am " +
+    (diffDate.toISOString().slice(0, 4) - 1970) +
+    " years " +
+    diffDate.getMonth() +
+    " months " +
+    (diffDate.getDate() - 1) +
+    " days old";
+  document.getElementById("patientAge").innerHTML = agestring;
+};
+
+const dob = new Date(2000, 3, 29, 5, 0, 0, 0);
+age(dob);

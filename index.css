@@ -121,35 +121,37 @@ a {
     opacity: 1;
   }
 }
-
 .close {
   color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
-
 .modal-header {
   padding: 2px 16px;
   background-color: #7f5cb8;
   color: white;
   border-radius: 15px 15px 0px 0px;
 }
-
 .modal-body {
   padding: 2px 16px;
 }
-
 .modal-footer {
   padding: 2px 16px;
   background-color: #7e5cb8;
   color: white;
   border-radius: 0px 0px 15px 15px;
+}
+#patientAge {
+  font-size: larger;
+  font-weight: bold;
+  position: absolute;
+  right: 50px;
+  padding: 20px;
 }
