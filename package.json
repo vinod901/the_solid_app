@@ -6,7 +6,8 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "npx gh-pages -d dist"
   },
   "license": "MIT",
   "devDependencies": {
@@ -18,6 +19,7 @@
     "@suid/material": "^0.4.2",
     "@zag-js/solid": "^0.1.9",
     "@zag-js/tabs": "^0.1.8",
+    "gh-pages": "^4.0.0",
     "solid-js": "^1.4.2"
   }
 }
