@@ -4,7 +4,7 @@ import Card from "@suid/material/Card";
 let Career: Component = () => {
   return (
     <div>
-      <Card>This is the Career tab</Card>
+      <Card>Working for Atom-Cloud</Card>
     </div>
   );
 };
